@@ -12,7 +12,27 @@
             return x*x;
         };
         console.log(square(12));
-        console.log(cube(12));
+        
+
+        const makeNoise = function() {
+        console.log("Pling!");
+        };
+        makeNoise()
+
+        function future() {
+        return "You'll never have flying cars";
+        }
+        console.log("The future says:", future());
+
+        //Arrow functions with two parameters
+        let sum = (a, b) => a + b;
+        console.log(sum(1,2))
+     
+        // Arrow functions with empty parameter
+        const horn = () => {
+            console.log("Welcome Arrow functions")
+        };
+        console.log(horn())
     </script>
 </body>
 </html>
