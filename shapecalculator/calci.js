@@ -125,4 +125,5 @@ function goToStep1() {
   document.getElementById("step3").style.display = "none";
   document.getElementById("shapesoption").style.display = "flex";
   document.getElementById("step1").style.display = "block";
+  document.getElementById("stepOneButton").style.display = "flex";
 }
