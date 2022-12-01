@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="calci.css" />
+  </head>
+  <body>
+    <div class="main-box">
+      <header>
+        <img src="C:\Users\Vishwas M\Desktop\javascript-training\shapecalculator\MicrosoftTeams-image.png" />
+      </header>
+    </div>
+    <div class="below-section">
+      <div class="description-section">
+        <p class="content-title">Welcome to Shape Calculator</p>
+
+        <p class="step-desc">
+          Shape Calculator is an interactive web application. To the right you
+          will find the 3 step application. Follow the instructions in each
+          step. Clicking cancel will take you back to step 1. Enjoy!
+        </p>
+        <p class="content">
+          A small river named Duden flows by their place and supplies it with
+          the necessary regelialia. It is a paradisematic country, in which
+          roasted parts of sentences fly into your mouth.
+        </p>
+        <p class="content">
+          Even the all-powerful Pointing has no control about the blind texts it
+          is an almost unorthographic life One day however a small line of blind
+          text by the name of Lorem Ipsum decided to leave for the far World of
+          Grammar. The Big Oxmox advised her not to do so, because there were
+          thousands of bad Commas.
+        </p>
+      </div>
+
+      <div class="calculator-box">
+        <p id="caltitle" class="cal-title">Step 1 : Select your shape</p>
+        <p id="caldesc" class="cal-desc">
+          Please select the shape that you would like to calculate the area of
+          and press the button "Go to step 2"
+        </p>
+
+        <div id="shapesoption" class="shapes-option">
+          <div class="option">
+            <input type="radio" id="rectangle" name="shape" value="rectangle" checked />
+            <label for="rectangle">Rectangle</label>
+          </div>
+          <div class="option">
+            <input type="radio" id="circle" name="shape" value="circle" />
+            <label for="circle">Circle</label>
+          </div>
+          <div class="option">
+            <input type="radio" id="square" name="shape" value="square" />
+            <label for="square">Square</label>
+          </div>
+          <div class="option">
+            <input type="radio" id="ellipse" name="shape" value="ellipse" />
+            <label for="ellipse">Ellipse</label>
+          </div>
+        </div>
+
+        <div class="button-holder" id="stepOneButton">
+          <button
+            class="next-button"
+            id="step1"
+            onclick="goToStep2()"
+            style="display: block; cursor: pointer;"
+          >
+            Go to step 2
+          </button>
+          <p style="margin: 10px 10px">or</p>
+          <p style="margin: 10px 10px;  color: rgb(143, 138, 138);">
+            Cancel
+        </p>
+        </div>
+
+        <div class="step-two" id="rectangleValues" style="display: none">
+          <div class="value-input-separation">
+            <label for="rectangle">Length: </label>
+            <input type="number" id="length" placeholder="Enter Length" />
+          </div>
+          <div class="value-input-separation">
+            <label for="rectangle">Breadth: </label>
+            <input type="number" id="breadth" placeholder="Enter Breadth" />
+          </div>
+        </div>
+
+        <div class="step-two" id="circleValues" style="display: none">
+          <label for="circle">Radius: </label>
+          <input type="number" id="radius" placeholder="Enter Radius" />
+        </div>
+
+        <div class="step-two" id="squareValues" style="display: none">
+          <label for="square">Side: </label>
+          <input type="number" id="side" placeholder="Enter Side" />
+        </div>
+
+        <div class="step-two" id="ellipseValues" style="display: none">
+          <div class="value-input-separation">
+            <label for="ellipse">Long axis: </label>
+            <input type="number" id="longaxis" placeholder="Enter Long axis" />
+          </div>
+          <div class="value-input-separation">
+            <label for="ellipse">Short axis: </label>
+            <input
+              type="number"
+              id="shortaxis"
+              placeholder="Enter Short axis"
+            />
+          </div>
+        </div>
+
+        <div class="button-holder" id="stepTwoButton" style="display: none">
+          <button
+            class="next-button"
+            id="step2"
+            onclick="goToStep3()"
+            style="display: none"
+          >
+            Go to step 3
+          </button>
+          <p style="margin: 10px 10px">or</p>
+          <p
+            onclick="location.reload()"
+            style="margin: 10px 10px; cursor: pointer"
+          >
+            Cancel
+          </p>
+        </div>
+
+        <div class="step-three" id="result" style="display: none">
+          <p id="arearesult" class="area-result"></p>
+        </div>
+
+        <button
+          class="next-button"
+          id="step3"
+          onclick="goToStep1()"
+          style="display: none"
+        >
+          Start Over
+        </button>
+      </div>
+
+      <div class="advertise">
+        <img src="C:\Users\Vishwas M\Desktop\javascript-training\shapecalculator\tree.png" alt="banner" width="auto" height="100">
+        <p>Advertisement</p>
+      </div>
+    </div>
+    <script type="text/javascript" src="calci.js"></script>
+  </body>
+</html>
